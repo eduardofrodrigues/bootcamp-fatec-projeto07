@@ -16,7 +16,7 @@ public class Student {
         this.name = name;
         this.email = email;
         this.phone = phone;
-        IdCourse = idCourse;
+        this.IdCourse = idCourse;
         this.period = period;
     }
 

@@ -3,6 +3,7 @@ package com.abutua.alunos.controllers;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,6 +12,7 @@ import com.abutua.alunos.models.Course;
 import jakarta.annotation.PostConstruct;
 
 @RestController
+@CrossOrigin
 public class CoursesController {
     List<Course> courses = new ArrayList<>();
 
