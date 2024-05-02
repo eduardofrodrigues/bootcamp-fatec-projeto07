@@ -27,9 +27,9 @@ public class StudentsController {
 
     @PostConstruct
     public void initList() {
-        Student std1 = new Student(1, "Eduardo Rodrigues", "email@email.com", "15999999999", 1, 3);
-        Student std2 = new Student(2, "Eduardo Affonso", "email@email.com", "15999999999", 2, 2);
-        Student std3 = new Student(3, "Eduardo Gutierres", "email@email.com", "15999999999", 1, 3);
+        Student std1 = new Student(1, "Eduardo Rodrigues", "email@email.com", "(15) 9999-99999", 1, 3);
+        Student std2 = new Student(2, "Eduardo Affonso", "email@email.com", "(15) 9999-99999", 2, 2);
+        Student std3 = new Student(3, "Eduardo Gutierres", "email@email.com", "(15) 9999-99999", 1, 3);
 
         students.add(std1);
         students.add(std2);
