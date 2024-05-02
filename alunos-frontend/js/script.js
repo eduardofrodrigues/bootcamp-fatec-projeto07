@@ -50,21 +50,26 @@ function addStudent() {
   const nameText = document.getElementById("name").value;
   const emailText = document.getElementById("email").value;
   const phoneText = document.getElementById("phone").value;
-  const courseText = document.getElementById("courses").value;
-  const shiftText = document.querySelector('input[name="inputRadioTurno"]:checked').value;
+  const idCourseText = document.getElementById("courses").value;
+  const periodText = document.querySelector("input[name = 'inputRadioTurno']:checked").value;
 
   const aluno = {
-    id: (alunos.length + 1),
     name: nameText,
     email: emailText,
     phone: phoneText,
-    course: courseText,
-    shift: shiftText
+    idCourse: parseInt(idCourseText),
+    period: parseInt(periodText)
   }
 
-  alunos.push(aluno);
-  addRow(aluno);
-
-  const form = document.getElementById("formNewStudent");
-  form.reset();
+  $.ajax({
+    url: "http://localhost:8080/students",
+    type: "POST",
+    data: JSON.stringify(aluno),
+    contentType: "application/json",
+    success: (response) => {
+      addRow(response);
+      alunos.push(response)
+      document.getElementById("formNewStudent").reset();
+    }
+  });
 }
