@@ -14,6 +14,11 @@ function getCourses() {
     async: false,
     success: (response) => {
       courses = response;
+      for (let course of courses) {
+        document.getElementById("courses").innerHTML += `
+          <option value="${course.id}">${course.name}</option>
+        `
+      }
     }
   });
 }
