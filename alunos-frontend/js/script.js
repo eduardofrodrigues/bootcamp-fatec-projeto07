@@ -51,7 +51,7 @@ function addStudent() {
   const emailText = document.getElementById("email").value;
   const phoneText = document.getElementById("phone").value;
   const idCourseText = document.getElementById("courses").value;
-  const periodText = document.querySelector("input[name = 'inputRadioTurno']:checked").value;
+  const periodText = $("input[name = 'inputRadioTurno']:checked").val();
 
   const aluno = {
     name: nameText,
